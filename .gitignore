@@ -1,0 +1,26 @@
+# Segredos: senhas de Wi-Fi, chaves de API
+secrets.h
+*.secret
+.env
+
+# Compilação de sketches
+sketches/**/build/
+
+# KiCad: arquivos locais e cópias de segurança
+*-backups/
+*.kicad_prl
+fp-info-cache
+*.lck
+~*.lck
+_autosave-*
+
+# Fatiador e editor
+*.gcode
+.vscode/
+.DS_Store
+
+# Site gerado (scripts/montar_site.py + mkdocs)
+build/
+
+# Projeto de outra sessão, fora deste repositório por enquanto
+ha-voice-hub/

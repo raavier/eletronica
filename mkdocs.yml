@@ -1,0 +1,67 @@
+# Site da trilha. Gere com:
+#   python3 scripts/montar_site.py && mkdocs serve
+site_name: Trilha de eletrônica prática
+site_description: Do LED na protoboard até uma placa própria fabricada.
+site_url: https://raavier.github.io/eletronica/
+repo_url: https://github.com/raavier/eletronica
+edit_uri: ""
+docs_dir: build/docs
+site_dir: build/site
+
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.instant
+    - navigation.footer
+    - navigation.top
+    - navigation.sections
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      toggle: { icon: material/weather-night, name: Modo escuro }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      toggle: { icon: material/weather-sunny, name: Modo claro }
+
+extra_javascript:
+  - js/progresso.js
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - toc:
+      permalink: true
+
+nav:
+  - Início: index.md
+  - Módulos:
+      - "0 · Bancada": 00-bancada.md
+      - "1 · Circuitos sem código": 01-circuitos-sem-codigo.md
+      - "2 · Arduino de verdade": 02-arduino-de-verdade.md
+      - "3 · Sensores e barramentos": 03-sensores-e-barramentos.md
+      - "4 · Potência e movimento": 04-potencia-e-movimento.md
+      - "5 · ESP32 e IoT": 05-esp32-e-iot.md
+      - "6 · Do protótipo ao produto": 06-do-prototipo-ao-produto.md
+      - "7 · Avançado": 07-avancado.md
+      - "8 · Ganhar dinheiro": 08-ganhar-dinheiro.md
+      - "9 · Campo e indústria": 09-campo-e-industria.md
+  - Apoio:
+      - Lista de compras: compras.md
+      - Atalho Pocket AI: atalho-pocket-ai.md
+      - Pocket AI: pocket-ai.md
+      - Referências: referencias.md
